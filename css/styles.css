@@ -9,13 +9,19 @@
   pointer-events: none;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(18, 16, 16, 0.1),
+    rgba(147, 112, 219, 0.1),  /* Light Purple */
     rgba(0, 0, 0, 0.1) 1px,
-    rgba(0, 0, 0, 0.2) 1px,
-    rgba(0, 0, 0, 0.2) 2px
+    rgba(0, 0, 255, 0.2) 1px,  /* Blue */
+    rgba(0, 0, 0, 0.2) 2px,
+    rgba(138, 43, 226, 0.2) 2px,  /* Medium Purple */
+    rgba(138, 43, 226, 0.2) 3px,
+    rgba(0, 191, 255, 0.2) 3px,  /* Deep Sky Blue */
+    rgba(0, 191, 255, 0.2) 4px
   );
   animation: flicker 0.15s infinite;
   filter: brightness(1.1) contrast(1.5) saturate(1.2);
+  border-radius: 12% / 6%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Flicker Animation */
@@ -37,7 +43,9 @@
   z-index: 1;
   width: 80%;
   height: 80vh;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   overflow: auto;
   border: 2px solid #9a00ff;
   background-color: #000;
@@ -46,4 +54,37 @@
   resize: none;
   outline: none;
   padding: 10px;
+}
+
+
+/* Top Nav Menu */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 50%;  /* Centering it horizontally */
+  transform: translateX(-50%);  /* Adjust for exact centering */
+  width: 80%;  /* Same width as the terminal */
+  background-color: rgba(128, 128, 128, 0.8);  /* Gray background */
+  z-index: 9997;  /* Below the CRT overlay but above the terminal */
+  border-bottom-left-radius: 12% 6%;
+  border-bottom-right-radius: 12% 6%;
+}
+
+.top-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-nav a {
+  color: #9a00ff;  /* Soft purple */
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+.top-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
