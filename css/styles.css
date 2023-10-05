@@ -1,0 +1,39 @@
+/* CRT Overlay */
+body {
+    background-color: #000;
+    color: #9a00ff;
+    /* Soft purple */
+    font-family: 'Courier New', monospace;
+    filter: brightness(90%) contrast(150%);
+}
+
+/* Terminal styling */
+#terminal {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    overflow: auto;
+    border: 2px solid #9a00ff;
+    background-color: #000;
+    color: #9a00ff;
+    font-family: 'Courier New', monospace;
+    resize: none;
+    outline: none;
+    padding: 10px;
+}
+
+#crt-container {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
