@@ -24,6 +24,15 @@ const container = document.getElementById('crt-container');
 renderer.setSize(container.offsetWidth, container.offsetHeight);
 container.appendChild(renderer.domElement);
 
+// Check if crt-container exists
+const crtContainer = document.getElementById('crt-container');
+if (crtContainer) {
+  renderer.setSize(crtContainer.offsetWidth, crtContainer.offsetHeight);
+  crtContainer.appendChild(renderer.domElement);
+} else {
+  console.error("crt-container not found");
+}
+
 // Create shader material
 const shaderMaterial = new THREE.ShaderMaterial({
     vertexShader: vertexShader,
