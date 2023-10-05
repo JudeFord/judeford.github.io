@@ -1,45 +1,36 @@
 /* CRT Overlay */
 body {
-    background-color: #000;
-    color: #9a00ff;
-    /* Soft purple */
-    font-family: 'Courier New', monospace;
-    filter: brightness(90%) contrast(150%);
+  background-color: #000;
+  color: #9a00ff;
+  font-family: 'Courier New', monospace;
+  filter: brightness(90%) contrast(150%);
+}
+
+/* Container for terminal and canvas */
+#crt-container {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  margin: auto;
 }
 
 /* Terminal styling */
 #terminal {
-    position: absolute;
-    z-index: 2;
-    width: 80%;
-    height: 80vh;
-    margin: auto;
-    overflow: auto;
-    border: 2px solid #9a00ff;
-    background-color: #000;
-    color: #9a00ff;
-    font-family: 'Courier New', monospace;
-    resize: none;
-    outline: none;
-    padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  /* ... other styles */
 }
 
-#crt-container {
-    position: relative;
-    width: 80%;
-    height: 80vh;
-    margin: auto;
-  }
-  
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
-  #terminal, canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+/* Three.js canvas */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
