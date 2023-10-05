@@ -7,17 +7,19 @@
   height: 100%;
   z-index: 9999;
   pointer-events: none;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(147, 112, 219, 0.1),  /* Light Purple */
-    rgba(0, 0, 0, 0.1) 1px,
-    rgba(0, 0, 255, 0.2) 1px,  /* Blue */
-    rgba(0, 0, 0, 0.2) 2px,
-    rgba(138, 43, 226, 0.2) 2px,  /* Medium Purple */
-    rgba(138, 43, 226, 0.2) 3px,
-    rgba(0, 191, 255, 0.2) 3px,  /* Deep Sky Blue */
-    rgba(0, 191, 255, 0.2) 4px
-  );
+  background: repeating-linear-gradient(to bottom,
+      rgba(147, 112, 219, 0.1),
+      /* Light Purple */
+      rgba(0, 0, 0, 0.1) 1px,
+      rgba(0, 0, 255, 0.2) 1px,
+      /* Blue */
+      rgba(0, 0, 0, 0.2) 2px,
+      rgba(138, 43, 226, 0.2) 2px,
+      /* Medium Purple */
+      rgba(138, 43, 226, 0.2) 3px,
+      rgba(0, 191, 255, 0.2) 3px,
+      /* Deep Sky Blue */
+      rgba(0, 191, 255, 0.2) 4px);
   animation: flicker 0.15s infinite;
   filter: brightness(1.1) contrast(1.5) saturate(1.2);
   border-radius: 12% / 6%;
@@ -29,9 +31,11 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
+
   100% {
     opacity: 1;
   }
@@ -61,11 +65,16 @@
 .top-nav {
   position: fixed;
   top: 0;
-  left: 50%;  /* Centering it horizontally */
-  transform: translateX(-50%);  /* Adjust for exact centering */
-  width: 80%;  /* Same width as the terminal */
-  background-color: rgba(128, 128, 128, 0.8);  /* Gray background */
-  z-index: 9997;  /* Below the CRT overlay but above the terminal */
+  left: 50%;
+  /* Centering it horizontally */
+  transform: translateX(-50%);
+  /* Adjust for exact centering */
+  width: 80%;
+  /* Same width as the terminal */
+  background-color: rgba(128, 128, 128, 0.8);
+  /* Gray background */
+  z-index: 9997;
+  /* Below the CRT overlay but above the terminal */
   border-bottom-left-radius: 12% 6%;
   border-bottom-right-radius: 12% 6%;
 }
@@ -79,7 +88,8 @@
 }
 
 .top-nav a {
-  color: #9a00ff;  /* Soft purple */
+  color: #9a00ff;
+  /* Soft purple */
   text-decoration: none;
   padding: 15px;
   display: block;
